@@ -1,7 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-size: 100%;
-  font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
+
+/* Style nav bar with flexbox */
+ul {
+  background-color: #3D7FCF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+li {
+  font-size: 1.15rem;
+  height: 3rem;
+  border-bottom: 1px solid white;
+  flex-grow: 3;
+  padding: 1rem 0;
+  font-weight: 600;
+  color: white;
+}
+
+.cart-info {
+  flex-basis: 2rem;
+  flex-grow: 1;
+  padding: 1rem;
+
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+}
+
+/*  flow nav vertically with smaller viewport */
+@media only screen and (max-width: 480px) {
+  ul {
+    flex-flow: column;
+  }
+  li {
+    width: 100%;
+  }
+  .cart-info {
+    order: -1;
+  }
+}
+
 
 p {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -22,8 +73,22 @@ nav a:hover {
 
 /**************** HERO *****************/
 
+header {
+  overflow: auto;
+}
+
 header img {
-  max-height: 6rem;
+  max-height: 8rem;
+  padding: .5rem .75rem;
+  float: left;
+  display: inline-block;
+}
+
+h1 {
+  color: #3D7FCF;
+  display: inline-block;
+  font-weight: 800;
+  font-size: 2rem;
 }
 
 h1 .logo-w {
@@ -32,8 +97,33 @@ h1 .logo-w {
 
 /**************** ASIDE ****************/
 
-input[type="submit"] {
+aside {
+  float: left;
+  padding: .5rem;
+  padding-top: 4rem;
+  width: 15%;
+}
+
+@media only screen and (max-width: 640px) {
+  aside {
+    float: none;
+    width: 100%;
+    padding-top: .5rem;
+  }
+}
+
+label {
+  display: block;
+}
+
+input {
+  display: block;
   padding: .25rem;
+  margin: .25rem 0;
+  width: 100%;
+}
+
+input[type="submit"] {
   background-color: #3D7FCF;
   border: 1px solid #3D7FCF;
   border-radius: 5px;
@@ -41,15 +131,78 @@ input[type="submit"] {
   color: white;
 }
 
+
 /*********** PRODUCTS SECTION ***********/
 
 section {
+  float: left;
   padding: 0 .75rem;
+  width: 85%;
+}
+
+@media only screen and (max-width: 640px) {
+  section {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* Flexbox for products */
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-container:before, .item-container:after { 
+  content:""; display: table; 
+}
+
+.item-container:after { 
+  clear:both;
+}
+
+.item-container {
+  zoom:1; /* For IE 6/7 */ 
+}
+
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 .5% 1%;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.span_4_of_12 {
+  	width: 32.26%;
+}
+
+/* Change to 2 per column on smallish viewport */
+@media only screen and (max-width: 640px) {
+  .col {  
+    margin: 1% 0 1% 1%; 
+  }
+    
+  .span_4_of_12 {
+	width: 48%; 
+  }
+}
+
+/*  Change to full width on smaller viewport */
+@media only screen and (max-width: 480px) {
+  .col {  
+    margin: 1% 0 1% 0%; 
+  }
+    
+  .span_4_of_12 {
+	width: 100%; 
+  }
 }
 
 h2 {
-  padding-top: 1.5rem;
+  padding: .75rem 0;
   font-size: 2rem;
+  font-weight: 600;
   text-align: center;
   color: #2d2d2d;
 }
@@ -58,4 +211,11 @@ h3 {
   font-size: 1.2rem;
   text-align: center;
   color: #2d2d2d;
+}
+
+.col img {
+  display: block;
+  margin: auto;
+  padding: 1rem;
+  max-width: 100%;
 }
