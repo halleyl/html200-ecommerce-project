@@ -42,14 +42,13 @@ li a {
 
 /*  flow nav vertically with smaller viewport */
 @media only screen and 
-  (max-width: 480px),
-  (-webkit-min-device-pixel-ratio: 2), 
-  (min-resolution: 192dpi) {
+  (max-width: 480px) {
   ul {
     flex-flow: column;
   }
   li {
     width: 100%;
+    height: auto;
   }
   .cart-info {
     order: -1;
@@ -107,17 +106,6 @@ aside {
   width: 15%;
 }
 
-@media only screen and 
-  (max-width: 640px),
-  (-webkit-min-device-pixel-ratio: 2), 
-  (min-resolution: 192dpi) {
-  aside {
-    float: none;
-    width: 100%;
-    padding-top: .5rem;
-  }
-}
-
 label {
   display: block;
 }
@@ -135,6 +123,15 @@ input[type="submit"] {
   border-radius: 5px;
   font-size: .75rem;
   color: white;
+}
+
+@media only screen and 
+  (max-width: 640px) {
+  aside {
+    float: none;
+    width: 100%;
+    padding-top: 1rem;
+  }
 }
 
 
@@ -188,9 +185,7 @@ section {
 
 /* Change to 2 per column on smallish viewport */
 @media only screen and 
-  (max-width: 640px),
-  (-webkit-min-device-pixel-ratio: 2), 
-  (min-resolution: 192dpi) {
+  (max-width: 640px) {
   .col {  
     margin: 1% 0 1% 1%; 
   }
@@ -202,9 +197,7 @@ section {
 
 /*  Change to full width on smaller viewport */
 @media only screen and 
-  (max-width: 480px),
-  (-webkit-min-device-pixel-ratio: 2), 
-  (min-resolution: 192dpi) {
+  (max-width: 480px) {
   .col {  
     margin: 1% 0 1% 0%; 
   }
@@ -221,7 +214,7 @@ h2 {
   text-align: center;
   color: #2d2d2d;
 }
-
+    
 h3 {
   font-size: 1.2rem;
   text-align: center;
