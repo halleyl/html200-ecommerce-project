@@ -165,10 +165,6 @@ section {
   clear:both;
 }
 
-.item-container {
-  zoom:1; /* For IE 6/7 */ 
-}
-
 .col {
   display: block;
   float: left;
@@ -187,7 +183,6 @@ section {
   .col {  
     margin: 1% 0 1% 1%; 
   }
-    
   .span_4_of_12 {
 	width: 48%; 
   }
@@ -199,7 +194,6 @@ section {
   .col {  
     margin: 1% 0 1% 0%; 
   }
-    
   .span_4_of_12 {
 	width: 100%; 
   }
