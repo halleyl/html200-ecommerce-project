@@ -183,11 +183,12 @@ input[type="submit"] {
   aside {
     font-size: 2rem;
     float: none;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     padding-top: 1rem;
   }
   input {
-    font-size: 2rem;
+    font-size: 4rem;
     padding: .2rem;
     margin: .5rem 0;
     width: 100%;
@@ -196,7 +197,7 @@ input[type="submit"] {
     
     input[type="submit"] {
     border-radius: 5px;
-    font-size: 2rem;
+    font-size: 3rem;
     color: white;
   }
 }
@@ -216,6 +217,17 @@ section {
   section {
     float: none;
     width: 100%;
+  }
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  section {
+    float: none;
+    width: 90%;
+    margin: auto;
   }
 }
 
