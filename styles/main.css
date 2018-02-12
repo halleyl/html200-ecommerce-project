@@ -32,7 +32,6 @@ li {
   flex-basis: 2rem;
   flex-grow: 1;
   padding: 1rem;
-
 }
 
 li a {
@@ -71,7 +70,6 @@ li a {
   .cart-info {
     order: -1;
   }
-
 }
 
 p {
@@ -80,12 +78,16 @@ p {
   color: #2d2d2d;
 }
 
-/* TODO: size images manually so this is not necessary */
-/*
-img {
-  max-height: 20rem;
+/*  increase P line spacing for higher PD screens */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    p {
+      line-height: 2rem;
+    }
 }
-*/
 
 /***************** NAV *****************/
 
@@ -175,6 +177,7 @@ input[type="submit"] {
   }
 }
 
+/* Adapt email signup for higher PD mobile screens */
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 640px)
@@ -187,6 +190,7 @@ input[type="submit"] {
     margin: auto;
     padding-top: 1rem;
   }
+    
   input {
     font-size: 4rem;
     padding: .2rem;
@@ -220,6 +224,7 @@ section {
   }
 }
 
+/* Style product listing section for higher PD screens */
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
@@ -317,12 +322,17 @@ h3 {
   max-width: 100%;
 }
 
+/* Adjust product listings for higher PD mobile screens */
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
   h2 {
     font-size: 4rem;
+  }
+    
+  h3 {
+  font-size: 2rem;
   }
 
   .col img {
