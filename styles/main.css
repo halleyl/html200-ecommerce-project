@@ -55,6 +55,24 @@ li a {
   }
 }
 
+/*  flow nav vertically on higher PD viewport */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  ul {
+    flex-flow: column;
+  }
+  li {
+    width: 100%;
+    height: auto;
+    font-size: 3rem;
+  }
+  .cart-info {
+    order: -1;
+  }
+
+}
 
 p {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -63,9 +81,11 @@ p {
 }
 
 /* TODO: size images manually so this is not necessary */
+/*
 img {
   max-height: 20rem;
 }
+*/
 
 /***************** NAV *****************/
 
@@ -80,7 +100,7 @@ header {
 }
 
 header img {
-  max-height: 8rem;
+  max-height: 10rem;
   padding: .5rem .75rem;
   float: left;
   display: inline-block;
@@ -95,6 +115,26 @@ h1 {
 
 h1 .logo-w {
   font-size: 3.5rem;
+}
+
+/* Make logo and title bigger on high PD screen*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  
+  header img {
+  max-height: 30rem;
+  padding: 1rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h1 .logo-w {
+    font-size: 8rem;
+  }
 }
 
 /**************** ASIDE ****************/
@@ -125,6 +165,7 @@ input[type="submit"] {
   color: white;
 }
 
+/* Move email signup above products for smaller viewport */
 @media only screen and 
   (max-width: 640px) {
   aside {
@@ -133,6 +174,33 @@ input[type="submit"] {
     padding-top: 1rem;
   }
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+  aside {
+    font-size: 2rem;
+    float: none;
+    width: 100%;
+    padding-top: 1rem;
+  }
+  input {
+    font-size: 2rem;
+    padding: .2rem;
+    margin: .5rem 0;
+    width: 100%;
+    border: 1px solid #808080;
+    }
+    
+    input[type="submit"] {
+    border-radius: 5px;
+    font-size: 2rem;
+    color: white;
+  }
+}
+
 
 
 /*********** PRODUCTS SECTION ***********/
@@ -189,6 +257,7 @@ section {
 }
 
 /*  Change to full width on smaller viewport */
+
 @media only screen and 
   (max-width: 480px) {
   .col {  
@@ -198,6 +267,22 @@ section {
 	width: 100%; 
   }
 }
+
+/* Change to full width on higher PD viewports */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+  .col {  
+    margin: 1% 0 1% 0%; 
+  }
+  .span_4_of_12 {
+	width: 100%;
+    margin: 2rem auto;
+  }
+}
+
 
 h2 {
   padding: .75rem 0;
@@ -218,4 +303,20 @@ h3 {
   margin: auto;
   padding: 1rem;
   max-width: 100%;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  h2 {
+    font-size: 4rem;
+  }
+
+  .col img {
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    width: 100%;
+  }
 }
