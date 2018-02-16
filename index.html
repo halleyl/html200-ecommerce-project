@@ -44,13 +44,13 @@
 
   <main>
     <aside>
-      <form>
+      <form name="mailList" onsubmit="emailSubmit()">
         <label>Sign up for our mailing list:
           <input type="email" name="email">
         </label>
-
         <input type="submit" value="Submit">
       </form>
+      <p id="signup-confirm"></p>
     </aside>
 
     <section>
@@ -59,7 +59,7 @@
       <div class="item-container">
         <div class="col span_4_of_12">
           <h3>Reversible Plaid</h3>
-          <img srcset="images/reversible-plaid-310w.jpg,
+          <img srcset="images/reversible-plaid-310w.jpg 1x,
                        images/reversible-plaid.jpg 2x"
                src="images/reversible-plaid.jpg" 
                alt="reversible plaid scarf">
@@ -69,7 +69,7 @@
 
         <div class="col span_4_of_12">
           <h3>Fringed Plaid</h3>
-          <img srcset="images/fringed-plaid-310w.jpeg,
+          <img srcset="images/fringed-plaid-310w.jpeg 1x,
                        images/fringed-plaid.jpeg 2x"
                src="images/fringed-plaid.jpeg" 
                alt="fringed plaid scarf">
@@ -79,7 +79,7 @@
 
         <div class="col span_4_of_12">
           <h3>Multi Color</h3>
-          <img srcset="images/multi-color-310w.jpeg,
+          <img srcset="images/multi-color-310w.jpeg 1x,
                        images/multi-color.jpeg 2x"
                src="images/multi-color.jpeg" 
                alt="multi color scarf">
@@ -89,7 +89,7 @@
 
         <div class="col span_4_of_12">
           <h3>Northern Lights</h3>
-          <img srcset="images/northern-lights310w.jpg,
+          <img srcset="images/northern-lights-310w.jpg 1x,
                        images/northern-lights.jpg 2x"
                src="images/northern-lights.jpg" 
                alt="northern lights scarf">
@@ -99,7 +99,7 @@
 
         <div class="col span_4_of_12">
           <h3>Ombre Infinity</h3>
-          <img srcset="images/ombre-infinity-310w.jpg,
+          <img srcset="images/ombre-infinity-310w.jpg 1x,
                        images/ombre-infinity.jpg 2x"
                src="images/ombre-infinity.jpg" 
                alt="ombre infinity scarf">
@@ -109,7 +109,7 @@
 
         <div class="col span_4_of_12">
           <h3>Ashby Twill</h3>
-          <img srcset="images/twill-310w.jpg,
+          <img srcset="images/twill-310w.jpg 1x,
                        images/twill.jpg 2x"
                src="images/twill.jpg" 
                alt="ashby twill scarf">
@@ -119,7 +119,7 @@
 
         <div class="col span_4_of_12">
           <h3>Wool Cable Knit</h3>
-          <img srcset="images/wool-cable-310w.jpeg,
+          <img srcset="images/wool-cable-310w.jpeg 1x,
                        images/wool-cable.jpeg 2x"
                src="images/wool-cable.jpeg" 
                alt="wool cable knit scarf">
@@ -129,7 +129,7 @@
 
         <div class="col span_4_of_12">
           <h3>Etro Paisley-Print Silk</h3>
-          <img srcset="images/etro-310w.png,
+          <img srcset="images/etro-310w.png 1x,
                        images/etro.png 2x"
                src="images/etro.png" 
                alt="etro paisley print silk scarf">

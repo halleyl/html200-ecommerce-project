@@ -78,6 +78,12 @@ p {
   color: #2d2d2d;
 }
 
+/* Set style for confirmation after email submit*/
+#signup-confirm {
+  padding: .5rem 0;
+  color: green;
+}
+
 /*  increase P line spacing for higher PD screens */
 @media only screen 
   and (min-device-width: 320px) 

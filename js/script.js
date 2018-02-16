@@ -1,3 +1,24 @@
+function emailSubmit() {
+  
+  // Prevents the form from trying to submit to a server
+  event.preventDefault(); 
+  
+  // "document" is the name of the DOM (THIS ONE DOESN'T CHANGE)
+  // "custInfo" is the name of the form
+  // "name" is the name of the input
+  // "value" is the value within that input (THIS ONE DOESN'T CHANGE)
+  var eAddr = document.mailList.email.value
+  
+  document.querySelector("#signup-confirm").innerHTML = ("Thanks for signing up, " + eAddr + "!")
+  
+  console.log("Thanks for signing up, " + eAddr + "!")
+  
+  // This will clear the inputs after you submit (neat!)
+  document.mailList.email.value = ""
+  
+}
+
+
 // As an extra challenge, you can build the product listings
 // by looping over this array and creating HTML for each element.
 // This will be best accomplished after we do lesson 09.
