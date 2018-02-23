@@ -45,6 +45,7 @@ li {
   } 
   li {
     width: 100%;
+    font-size: 1.3rem;
   }
   .cart-info {
     order: -1;
