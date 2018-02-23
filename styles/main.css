@@ -8,8 +8,6 @@ email from should go on top
 products should switch to 2 per column
 */
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -71,6 +69,14 @@ p {
   color: #2d2d2d;
 }
 
+/* Increase P text a little below 400px */
+@media (max-width: 400px) {
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
+ 
 /* Set style for confirmation after email submit*/
 #signup-confirm {
   padding: .5rem 0;
@@ -137,15 +143,23 @@ input[type="submit"] {
 }
 
 /* Move email signup above products below 700px */
+/* And make text and inputs a little bigger */
 @media (max-width: 700px) {
   aside {
   float: none;
   width: 100%;
   padding-top: 1rem;
+  font-size: 1.3rem;
   }
   input {
     width: 100%;
     border: 1px solid #808080;
+    font-size: 1.3rem;
+    margin: .5rem 0;
+  }
+  input[type="submit"] {
+    font-size: 1.3rem;
+    padding: .5rem 0;
   }
 }
 
@@ -192,7 +206,7 @@ section {
 }
 
 /* Change to 2 per row below 700px */
-@media (max-width: 700px) {
+@media (max-width: 700px) and (min-width: 401px) {
   .col {
     margin: 1% 0 1% 1%;
   }
@@ -223,6 +237,13 @@ h3 {
   font-size: 1.2rem;
   text-align: center;
   color: #2d2d2d;
+}
+
+/* Make product titles a little bigger below 400px */
+@media (max-width: 400px) {
+  h3 {
+    font-size: 1.5rem;
+  }
 }
 
 .col img {
