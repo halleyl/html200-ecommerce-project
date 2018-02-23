@@ -1,3 +1,15 @@
+/*
+< 400
+nav needs to go to column
+products should switch to 1 per column
+
+< 700
+email from should go on top
+products should switch to 2 per column
+*/
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +38,19 @@ li {
   padding: 1rem 0;
   font-weight: 600;
   color: white;
+}
+
+/* Change nav to column below 400px */
+@media (max-width: 400px) {
+  ul {
+    flex-direction: column;
+  } 
+  li {
+    width: 100%;
+  }
+  .cart-info {
+    order: -1;
+  }
 }
 
 .cart-info {
@@ -111,12 +136,33 @@ input[type="submit"] {
   color: white;
 }
 
+/* Move email signup above products below 700px */
+@media (max-width: 700px) {
+  aside {
+  float: none;
+  width: 100%;
+  padding-top: 1rem;
+  }
+  input {
+    width: 100%;
+    border: 1px solid #808080;
+  }
+}
+
 /*********** PRODUCTS SECTION ***********/
 
 section {
   float: left;
   padding: 0 .75rem;
   width: 85%;
+}
+
+/* Change product section to 100% width below 700px */
+@media (max-width: 700px) {
+  section {
+    float: none;
+    width: 100%;
+  }
 }
 
 /* Flexbox for products */
@@ -143,6 +189,26 @@ section {
 
 .span_4_of_12 {
   	width: 32.26%;
+}
+
+/* Change to 2 per row below 700px */
+@media (max-width: 700px) {
+  .col {
+    margin: 1% 0 1% 1%;
+  }
+  .span_4_of_12 {
+    width: 48%;
+  }
+}
+
+/* Change to 1 per row below 400px; */
+@media (max-width: 400px) {
+  .col {
+    margin: 1% 0 1% 0;
+  }
+  .span_4_of_12 {
+    width: 100%;
+  }
 }
 
 h2 {
