@@ -1,11 +1,15 @@
 /*
-< 400
+< 450
 nav needs to go to column
 products should switch to 1 per column
+make fonts a little bigger so they're nicer to read on a phone
 
 < 700
 email from should go on top
 products should switch to 2 per column
+
+< 375
+h1 font size should be a little smaller so it doesn't wrap below image
 */
 
 * {
@@ -38,8 +42,8 @@ li {
   color: white;
 }
 
-/* Change nav to column below 400px */
-@media (max-width: 400px) {
+/* Change nav to column below 450px */
+@media (max-width: 450px) {
   ul {
     flex-direction: column;
   } 
@@ -63,15 +67,14 @@ li a {
   color: white;
 }
 
-
 p {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: lighter;
   color: #2d2d2d;
 }
 
-/* Increase P text a little below 400px */
-@media (max-width: 400px) {
+/* Increase P text a little below 450px */
+@media (max-width: 450px) {
   p {
     font-size: 1.2rem;
     line-height: 1.5rem;
@@ -113,6 +116,15 @@ h1 {
 
 h1 .logo-w {
   font-size: 3.5rem;
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+  h1 .logo-w {
+    font-size: 3.4rem;
+  }
 }
 
 /**************** ASIDE ****************/
@@ -207,7 +219,7 @@ section {
 }
 
 /* Change to 2 per row below 700px */
-@media (max-width: 700px) and (min-width: 401px) {
+@media (max-width: 700px) and (min-width: 451px) {
   .col {
     margin: 1% 0 1% 1%;
   }
@@ -216,8 +228,8 @@ section {
   }
 }
 
-/* Change to 1 per row below 400px; */
-@media (max-width: 400px) {
+/* Change to 1 per row below 450px; */
+@media (max-width: 450px) {
   .col {
     margin: 1% 0 1% 0;
   }
@@ -240,8 +252,8 @@ h3 {
   color: #2d2d2d;
 }
 
-/* Make product titles a little bigger below 400px */
-@media (max-width: 400px) {
+/* Make product titles a little bigger below 450px */
+@media (max-width: 450px) {
   h3 {
     font-size: 1.5rem;
   }
