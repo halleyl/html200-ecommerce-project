@@ -62,6 +62,10 @@ li {
   padding: 1rem;
 }
 
+#cartcount {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
 li a {
   text-decoration: none;
   color: white;
