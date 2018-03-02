@@ -21,7 +21,10 @@ function emailSubmit() {
 // Init array for shopping cart contents
 var cartContents = []
 
-function cartAdd (prodName) {
+// Init $0 value of shopping cart
+var totalPrice = 0
+
+function cartAdd (prodName,price) {
   event.preventDefault()
   
   // Set variable to get index of added product
@@ -29,22 +32,32 @@ function cartAdd (prodName) {
   
   // If the index doesn't exist, add the product to the array
   if(i == -1) {
-     cartContents.push(prodName)
-     } 
+    cartContents.push(prodName)
+    totalPrice = totalPrice + price
+    } 
   // If it's already there, find and remove it
   else {
-       cartContents.splice(i,1)
+    cartContents.splice(i,1)
+    totalPrice = totalPrice - price
      }
   
   // Console log the number of items in the cart
-  console.log(cartContents.length)
+  // And fix floating point to 2 decimals only
+  console.log(cartContents.length + " products for $" + totalPrice.toFixed(2) + " total.")
   
   // Add total number of products in cart next to cart icon
-  document.querySelector("#cartcount").innerHTML = ("  (" + cartContents.length + ")")
+  if(cartContents.length != 0) {
+    document.querySelector("#cartcount").innerHTML = ("  (" + cartContents.length + ")")
+  }
+  // Make the cart number disappear if there's nothing inside
+  else {
+    document.querySelector("#cartcount").innerHTML = ""
+  }
+
 }
 
 function cartReport() {
-  console.log(cartContents)
+  console.log("In your cart: " + cartContents.join(", "))
 }
 
 // As an extra challenge, you can build the product listings
