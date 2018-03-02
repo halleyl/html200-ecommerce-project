@@ -18,9 +18,33 @@ function emailSubmit() {
   
 }
 
-function cartAdd () {
+// Init array for shopping cart contents
+var cartContents = []
+
+function cartAdd (prodName) {
   event.preventDefault()
   
+  // Set variable to get index of added product
+  var i = cartContents.indexOf(prodName)
+  
+  // If the index doesn't exist, add the product to the array
+  if(i == -1) {
+     cartContents.push(prodName)
+     } 
+  // If it's already there, find and remove it
+  else {
+       cartContents.splice(i,1)
+     }
+  
+  // Console log the number of items in the cart
+  console.log(cartContents.length)
+  
+  // Add total number of products in cart next to cart icon
+  document.querySelector("#cartcount").innerHTML = ("  (" + cartContents.length + ")")
+}
+
+function cartReport() {
+  console.log(cartContents)
 }
 
 // As an extra challenge, you can build the product listings
