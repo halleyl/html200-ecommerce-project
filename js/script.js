@@ -18,6 +18,10 @@ function emailSubmit() {
   
 }
 
+function cartAdd () {
+  event.preventDefault()
+  
+}
 
 // As an extra challenge, you can build the product listings
 // by looping over this array and creating HTML for each element.
