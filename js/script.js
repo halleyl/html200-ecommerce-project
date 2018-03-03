@@ -24,6 +24,7 @@ var cartContents = []
 // Init $0 value of shopping cart
 var totalPrice = 0
 
+// First, we pass the product name and price into this function
 function cartAdd (prodName,price) {
   event.preventDefault()
   
@@ -39,7 +40,18 @@ function cartAdd (prodName,price) {
   else {
     cartContents.splice(i,1)
     totalPrice = totalPrice - price
-     }
+    }
+  
+  // Sort product names alphabetically
+  // (This was part of the rubric but not the instructions)
+  cartContents = cartContents.sort()
+  
+  // Sometimes the floating point weirdness makes the 
+  // cart total something like -0.00000000002
+  // so this will set it back to zero if that happens
+  if(totalPrice < 0 && totalPrice > -0.1) {
+    totalPrice = 0
+  }
   
   // Console log the number of items in the cart
   // And fix floating point to 2 decimals only
@@ -56,6 +68,7 @@ function cartAdd (prodName,price) {
 
 }
 
+// Clicking on the cart icon logs your cart contents to console
 function cartReport() {
   console.log("In your cart: " + cartContents.join(", "))
 }
