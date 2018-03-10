@@ -70,3 +70,72 @@ Each weekly assignment will be graded independently. There will not be a final g
 
 ## Testing
 [update this section with information about the testing steps you took to ensure site quality]
+
+--*--*--*--*--*--*--*--*--*--
+
+Responsivity
+
+Tested on Responsive Design Checker and Chrome Developer Tools. Site renders well and images/text remain clear when viewport is reduced. At 15" screen size or below, the text above the email form wraps, which makes it look a little less polished, but doesn't affect functionality.
+
+Tested on Google's Mobile-Friendly Test. It's mobile friendly!
+
+Also tested on Webpagetest. Load time is about 1 second on first view, and about half a second on repeat view. Most of the content (67.5%) is images. May be useful to look for ways to further optimize images.
+
+--*--*--*--*--*--*--*--*--*--
+
+Mobile Tests
+
+iPhone 7
+Tested on Chrome Developer Tools. Add to cart buttons do not seem to have a background color in their load state. This may be a factor of the emulator, but would be good to test on a physical device to be certain. Best practice would be to define the background color for the button's base (unclicked) state, which it looks like I forgot to do! Everything else looks good - font size and photos are big enough. Touch target areas for buttons are large enough to be used easily on mobile.
+
+iPhone 6
+Tested on Responsive Design Checker. Renders very similarly to iPhone 7, but the buttons are visible here. Layout and text/images sizes look good. Also checked landscape layout on Screenfly (another device emulator*) since Responsive Design Checker doesn't appear to allow you to rotate the emulated screen. *http://quirktools.com/screenfly/
+
+iPhone 5
+Tested physically on my old iPhone. Page renders well, but the buttons are all rounded instead of square. Could add consistency to the site by defining the border radius of the buttons as 0. Text/image sizes are good. Landscape layout good.
+
+Galaxy S6
+Tested on Responsive Design Checker. Renders very well, buttons look as expected, text/image sizes are good.
+
+Galaxy S8
+Was unable to find an emulator for this device online. (Would try to find physical device to test on.)
+
+--*--*--*--*--*--*--*--*--*--
+
+Tablet Tests
+
+iPad Pro
+Tested on Responsive Design Checker. Renders well on iPad, with no noticeable issues. Header image and H1 do appear a little too small in relation to the rest of the content. Something to fix?
+
+iPad Mini
+Tested on Responsive Design Checker. Mostly good, but in portrait mode the product columns are still 3 across, which starts to look cramped at this size. Set breakpoint to a slightly higher number of pixels?  
+
+iPad Air
+This one isn't on RDC or Screenfly, so I found another emulator.* Looks good in landscape, but a little cramped in portrait like the Mini. *http://www.viewportemulator.com/
+
+Surface Pro 4
+Tested on Screenfly. Looks good in both portrait and landscape. Everything on site looks as intended.
+
+Galaxy Tab S2
+Tested on Screenfly. Renders well, but a little cramped in portrait like the iPad Mini and Air.
+
+--*--*--*--*--*--*--*--*--*--
+
+Laptop Tests
+
+Testing in browsers instead of trying to emulate devices (since it should look very similar on different devices). Ideally I would want to test each browser on Mac, Windows and possibly Linux machines.
+
+Chrome
+Tested on MacBook Pro 13" running High Sierra. Renders well at full size, and breakpoints seem effective on this device. Text is comfortable reading size and scales well when the user increases browser font size.
+
+Firefox
+Tested on MacBook Pro. Renders well, very similar to Chrome (can't see any functional or cosmetic differences.)
+
+Edge
+Tested on Toshiba Laptop running Windows 10. Page renders well, but there is no vertical margin between product listings (the border around a product listing touches the border of the one below), which makes them look crowded.
+
+Opera
+Tested on MacBook Pro. Renders well, looks identical to Chrome and Firefox.
+
+Internet Explorer
+Tested on Toshiba Laptop. Most of the site renders well, but the product images are vertically stretched about 50% larger than they should be. Need to find a fix for this. Check CSS and cross-reference IE's support for what I'm doing. (Try https://caniuse.com/)
